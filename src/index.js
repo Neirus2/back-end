@@ -20,7 +20,8 @@ app.use(cors({
       callback(new Error('Origen no permitido por CORS'));
     }
   },
-  credentials: true, 
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], 
 }));
 
 app.use(express.json());
