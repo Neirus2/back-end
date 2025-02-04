@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const allowedOrigins = [
-  'front-end-swart-five-19.vercel.app', 
+  'https://front-end-swart-five-19.vercel.app', 
   'http://localhost:4200', 
 ];
 
@@ -22,6 +22,7 @@ app.use(cors({
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], 
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json());
