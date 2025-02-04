@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const allowedOrigins = [
   'https://front-end-swart-five-19.vercel.app', 
-  'https://front-end',
   'http://localhost:4200', 
 ];
 
@@ -21,9 +20,7 @@ app.use(cors({
       callback(new Error('Origen no permitido por CORS'));
     }
   },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], 
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true, 
 }));
 
 app.use(express.json());
